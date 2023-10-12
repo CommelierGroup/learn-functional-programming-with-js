@@ -1,0 +1,29 @@
+{
+  "name": "functional-programming-with-js",
+  "version": "1.0.0",
+  "description": "Learn JavaScript with Test-driven development",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "diff": "git diff --name-only --staged --diff-filter=d | grep -E '\\.(js(on)?)$' || exit 0",
+    "lint": "yarn diff 2>/dev/null | grep -E '\\.(js(on)?)$' | xargs eslint",
+    "fix": "yarn diff 2>/dev/null | grep -E '\\.(js(on)?)$' | xargs eslint --fix"
+  },
+  "keywords": [
+    "Test-driven development",
+    "JavaScript",
+    "Functional Programming"
+  ],
+  "author": "JeHwanYoo",
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3"
+  }
+}

@@ -1,4 +1,5 @@
 import { describe, it } from 'node:test'
+import * as assert from 'node:assert'
 
 describe('makeAddN', () => {
   it.todo('should create a closure that performs x + 2')

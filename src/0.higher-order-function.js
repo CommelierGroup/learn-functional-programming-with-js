@@ -3,9 +3,5 @@ export const makeAddN = (fn, n) => {
 }
 
 export const times = (fn, n) => {
-  const result = []
-  for (let i = 0; i < n; i++) {
-    result.push(fn(i))
-  }
-  return result
+  return Array.from({ length: n }, (_, i) => fn(i))
 }

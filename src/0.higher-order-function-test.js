@@ -4,7 +4,8 @@ import { makeAddN } from './0.higher-order-function.js'
 
 describe('makeAddN', () => {
   it('should create a closure that performs x + 2', () => {
-    const add2 = makeAddN(2)
+    const add = (a, b) => a + b
+    const add2 = makeAddN(add, 2)
 
     const want = 12
     const got = add2(10)

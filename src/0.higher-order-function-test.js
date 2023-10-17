@@ -5,5 +5,5 @@ describe('makeAddN', () => {
 })
 
 describe('times', () => {
-  it.todo('should perform x + 0, x + 1, x + 2, ..., x + 5')
+  it.todo('should perform pow(0), pow(1), pow(2), ..., pow(5)')
 })

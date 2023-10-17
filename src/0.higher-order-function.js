@@ -1,3 +1,3 @@
-const makeAddN = n => {}
+export const makeAddN = n => {}
 
-const times = (fn, n) => {}
+export const times = (fn, n) => {}

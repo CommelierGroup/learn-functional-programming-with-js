@@ -1,8 +1,16 @@
 import { describe, it } from 'node:test'
 import * as assert from 'node:assert'
+import { makeAddN } from './0.higher-order-function.js'
 
 describe('makeAddN', () => {
-  it.todo('should create a closure that performs x + 2')
+  it('should create a closure that performs x + 2', () => {
+    const add2 = makeAddN(2)
+
+    const want = 12
+    const got = add2(10)
+
+    assert.equal(want, got)
+  })
 })
 
 describe('times', () => {

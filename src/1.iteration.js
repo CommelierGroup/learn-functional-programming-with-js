@@ -1,5 +1,19 @@
-export const iterable = {}
+export const iterable = {
+  [Symbol.iterator]() {
+    let i = 0
+    return {
+      next() {
+        return i === 3 ? { done: true } : { value: i++, done: false }
+      },
+      [Symbol.iterator]() {
+        return this
+      },
+    }
+  },
+}
 
-export const checkIterable = target => {}
-
-export const checkIterableIterator = target => {}
+export function* generator() {
+  yield 0
+  yield 1
+  yield 2
+}

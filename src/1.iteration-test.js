@@ -1,5 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert'
+import { iterable } from './1.iteration.js'
 
 describe('Array, Set, Map', () => {
   it('should be iterable', () => {
@@ -25,7 +26,9 @@ describe('Array, Set, Map', () => {
 })
 
 describe('iteration protocols', () => {
-  it.todo('should be iterable')
+  it('should be iterable', () => {
+    assert.notStrictEqual(iterable[Symbol.iterator], undefined)
+  })
 
   it.todo('should have the well-formed iterator')
 })

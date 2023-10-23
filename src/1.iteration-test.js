@@ -30,7 +30,12 @@ describe('iteration protocols', () => {
     assert.notStrictEqual(iterable[Symbol.iterator], undefined)
   })
 
-  it.todo('should have the well-formed iterator')
+  it('should have the well-formed iterator', () => {
+    const expected = [0, 1, 2]
+    const iterator = iterable[Symbol.iterator]()
+
+    assert.deepEqual([...iterator], expected)
+  })
 })
 
 describe('generator', () => {

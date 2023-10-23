@@ -12,4 +12,8 @@ export const iterable = {
   },
 }
 
-export function* generator() {}
+export function* generator() {
+  yield 0
+  yield 1
+  yield 2
+}

@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert'
-import { iterable } from './1.iteration.js'
+import { generator, iterable } from './1.iteration.js'
 
 describe('Array, Set, Map', () => {
   it('should be iterable', () => {
@@ -39,7 +39,10 @@ describe('iteration protocols', () => {
 })
 
 describe('generator', () => {
-  it.todo('should be iterable')
+  it('should be iterable', () => {
+    const gen = generator()
+    assert.notStrictEqual(gen[Symbol.iterator], undefined)
+  })
 
   it.todo('should have the well-formed iterator')
 })

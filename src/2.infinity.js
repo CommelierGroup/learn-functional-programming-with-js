@@ -1,4 +1,4 @@
-export function* infinity(start) {}
+export function* infinity(fn, start) {}
 
 export function* limit(n, iterable) {}
 

@@ -5,6 +5,9 @@ export const iterable = {
       next() {
         return i === 3 ? { done: true } : { value: i++, done: false }
       },
+      [Symbol.iterator]() {
+        return this
+      },
     }
   },
 }

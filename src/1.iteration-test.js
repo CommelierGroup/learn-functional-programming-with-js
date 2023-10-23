@@ -44,5 +44,12 @@ describe('generator', () => {
     assert.notStrictEqual(gen[Symbol.iterator], undefined)
   })
 
-  it.todo('should have the well-formed iterator')
+  it('should have the well-formed iterator', () => {
+    const expected = [0, 1, 2]
+    const gen = generator()
+    const iterator = gen[Symbol.iterator]()
+
+    assert.strictEqual(iterator, gen)
+    assert.deepEqual([...iterator], expected)
+  })
 })

@@ -12,7 +12,16 @@ describe('Array, Set, Map', () => {
     assert.notStrictEqual(map[Symbol.iterator], undefined)
   })
 
-  it.todo('should have the well-formed iterator')
+  it('should have the well-formed iterator', () => {
+    const array = [1, 2, 3]
+    const set = new Set(array)
+
+    const arrayIterator = array[Symbol.iterator]()
+    const setIterator = set[Symbol.iterator]()
+
+    assert.deepEqual([...arrayIterator], array)
+    assert.deepEqual([...setIterator], array)
+  })
 })
 
 describe('iteration protocols', () => {
